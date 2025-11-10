@@ -2,7 +2,6 @@ FROM ruby:3.4.7-alpine
 
 WORKDIR /usr/src/app
 
-# Throw errors if Gemfile has been modified since Gemfile.lock was last updated.
 RUN addgroup -S fibscale && \
   adduser -D -G fibscale -S fibscale && \
   chown fibscale:fibscale /usr/src/app
